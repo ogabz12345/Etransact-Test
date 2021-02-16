@@ -1,0 +1,145 @@
+<div class="container-fluid mt-1">
+  <div class="container-fluid mt-1">
+
+    <div class="row py-3 px-4">
+      <div class="col-md-12">
+        <h1 class="text-bold">Add Card</h1>
+      </div>
+      <div class="col-md-12">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a (click)="cancel()">Card Lists</a>
+            </li>
+            <li class="breadcrumb-item active">
+              <a>Add Card</a>
+            </li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+    <div class="row py-5 px-5">
+      <div class="col-md-12">
+        <div class="card panel mb-5">
+          <div class="card-body p-4">
+            <div class="row p-4 mb-3">
+              <div class="col-md-12">
+                <p class="subtitle mb-0">Data table contains information for all account added</p>
+              </div>
+            </div>
+            <div class="row p-4">
+              <div class="col-md-12">
+                <div class="form-body" [formGroup]="cardDetails">
+                  <div class="row">
+                    <div class="col-sm-12 col-md-10 offset-md-1">
+                      <div class="row">
+                        <div class="col-md-6">
+                          <div class="form-group form-row">
+                            <label class="control-label col-md-4">Credit Card Number
+                              &nbsp;
+
+                            </label>
+
+                            <div class="col-md-8">
+                              <input type="number" class="form-control"
+                                     formControlName="creditCardNo" name="creditCardNo">
+                              <span class="text-danger"
+                                    *ngIf="(registerFormControl.creditCardNo.touched || submitted) && registerFormControl.creditCardNo.errors?.required">
+                                Credit Card Number is required
+                            </span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-md-6">
+                          <div class="form-group form-row">
+                            <label class="control-label col-md-4">Card Holder
+                              &nbsp;
+
+                            </label>
+
+                            <div class="col-md-8">
+                              <input type="text" class="form-control" formControlName="cardHolder" name="cardHolder">
+                              <span class="text-danger"
+                                    *ngIf="(registerFormControl.cardHolder.touched || submitted) && registerFormControl.cardHolder.errors?.required">
+                                Card Holder is required
+                            </span>
+                            </div>
+                          </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                          <div class="form-group form-row">
+                            <label class="control-label col-md-4">Expiration Date</label>
+                            <div class="col-md-8 pl-2">
+                              <input name="expirationDate" formControlName="expirationDate"
+                                     [value]="cardDetails.get('expirationDate').value | date:'yyyy-MM-dd'" type="date"
+                                     class="form-control" placeholder="">
+                              <span class="text-danger"
+                                    *ngIf="(registerFormControl.expirationDate.touched || submitted) && registerFormControl.expirationDate.errors?.response">
+                               Expiry Date should be greater than present date.                            </span>
+                            </div>
+
+                          </div>
+                        </div>
+
+
+                        <div class="col-md-6">
+                          <div class="form-group form-row">
+                            <label class="control-label col-md-4">Security Code</label>
+                            <div class="col-md-8 pl-2">
+                              <input name="securityCode" maxlength="3" formControlName="securityCode" type="text"
+                                     class="form-control" placeholder="" style="text-align: right;">
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="col-md-6">
+                          <div class="form-group form-row">
+                            <label class="control-label col-md-4">Amount
+                              &nbsp;
+
+                            </label>
+
+                            <div class="col-md-8">
+                              <input type="number" class="form-control" formControlName="amount"
+                                     name="description">
+                              <span class="text-danger"
+                                    *ngIf="(registerFormControl.amount.touched || submitted) && registerFormControl.amount.errors?.required">
+                                Amount is required
+                            </span>
+                              <span class="text-danger"
+                                    *ngIf="(registerFormControl.amount.touched || submitted) && registerFormControl.amount.errors?.minlength">
+                                Amount should be greater than 0
+                            </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card-footer">
+                  <div class="row p-3">
+                    <div class="col-md-10"></div>
+                    <div class="col-md-1 text-right">
+                      <button class="btn btn-outline-primary btn-block" type="submit" (click)="cancel()">Cancel
+
+                      </button>
+                    </div>
+                    <div class="col-md-1 text-right">
+                      <button class="btn btn-primary btn-block" type="submit" (click)="addTutorial()">
+                        Save
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
