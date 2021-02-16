@@ -103,7 +103,7 @@ h1 {
   background-position: center center;
   background-size: cover;
   min-height: 100%; /* modified here */
-  padding-top: 50px;
+  padding-top: 30px;
   width: 100%;
 }
 
@@ -142,4 +142,14 @@ h1 {
   padding: 1px 6px;
   font-size: 9px;
   border-radius: 5px;
+}
+
+.primary-color{
+  color: $primary_color;
+}
+.subtitle {
+  color: rgb(93, 93, 93);
+  font-weight: 100;
+  font-size: 13px;
+  letter-spacing: 0.04em;
 }
