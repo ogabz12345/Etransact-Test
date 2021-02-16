@@ -1,20 +1,4 @@
-<div class="container-fluid mt-1">
-  <div class="container-fluid mt-1">
-
-    <div class="row py-3 px-4">
-      <div class="col-md-12">
-        <h1 class="text-bold">Cards</h1>
-      </div>
-      <div class="col-md-12">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item active">
-              <a>Card List</a>
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
+<div class="container mt-1">
     <div class="row py-5 px-5" *ngIf="ccdToModels">
       <div class="col-md-12">
         <div class="card panel mb-5">
@@ -26,20 +10,20 @@
               </div>
             </div>
             <div class="row px-4 pt-4 mb-0">
-              <div class="col-md-2">
+              <div class="col-md-3">
                 <div class="mb-3">
                   <input type="text" class="form-control search" placeholder="Search">
                 </div>
               </div>
-              <div class="col-md-1 offset-md-9">
+              <div class="col-md-2 offset-md-7">
                 <button class="btn btn-block btn-primary" (click)="addNew()"><i
                   class="flaticon-add mr-2"></i>New
                 </button>
               </div>
             </div>
             <div class="row p-4">
-              <div class="col-md-12">
-                <table class="table table-border">
+                <div class="table-responsive">
+                  <table class="table table-hover ">
                   <thead>
                   <th>Credit Card No</th>
                   <th>Holder Name</th>
@@ -63,5 +47,4 @@
         </div>
       </div>
     </div>
-  </div>
 </div>

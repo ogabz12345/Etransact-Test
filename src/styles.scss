@@ -18,7 +18,7 @@ input[type=text],
 input[type=number] {
   // width: 100%;
   height: 30px !important;
-  border-radius: 0px;
+  border-radius: 0;
   border: 1px solid #ced4da;
   font-size: 13px;
   // line-height: 19.5px;
@@ -26,7 +26,7 @@ input[type=number] {
 }
 
 input[type="date"].form-control {
-  border-radius: 0px;
+  border-radius: 0;
   border: 1px solid #ced4da !important;
   font-size: 13px;
   line-height: 19.5px;
@@ -36,7 +36,7 @@ input[type="date"].form-control {
 input[type=search] {
   width: 50%;
   height: 30px!important;
-  border-radius: 0px;
+  border-radius: 0;
   border: 1px solid #ced4da;
   font-size: 13px;
   line-height: 19.5px;
@@ -61,7 +61,6 @@ input[type=search] {
 
 .breadcrumb-item a {
   color: $light_primary_color;
-  color: lighten($primary_color, 15%);
   // color: #252a98;
 }
 
@@ -70,4 +69,68 @@ input[type=search] {
   padding-right: .5rem;
   color: #6c757d;
   content: ">";
+}
+
+label {
+  font-size: 13px;
+  color: rgb(93, 93, 93)
+}
+h1,
+h2{
+  font-family: 'Poppins', sans-serif;
+}
+
+a,
+p,
+td {
+  font-family: 'Nunito', sans-serif;
+}
+
+td {
+  font-size: 12px;
+}
+
+p {
+  font-size: 14px;
+}
+
+h1 {
+  font-size: 24px;
+  color: $primary_color;
+}
+.container {
+  background-attachment: fixed; /* modified here */
+  background-position: center center;
+  background-size: cover;
+  min-height: 100%; /* modified here */
+  padding-top: 100px;
+  width: 100%;
+}
+
+.card-body{
+  padding: 0 !important;
+}
+
+.btn {
+  font-size: 0.875rem !important;
+  padding: .25rem .5rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+  display: block;
+  width: 100%;
+}
+.card-footer .btn {
+  padding: .25rem .5rem;
+  font-size: .875rem;
+  line-height: 1.5;
+  border-radius: .2rem;
+  display: block;
+  width: 100%;
+}
+.table thead th {
+  padding: 0.43rem 0.2rem;
+  font-weight: 400;
+  color: $dark_color;
+  font-size: 14px;
+  text-align: left;
 }

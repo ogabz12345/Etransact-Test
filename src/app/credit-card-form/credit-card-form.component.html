@@ -1,27 +1,8 @@
-<div class="container-fluid mt-1">
-  <div class="container-fluid mt-1">
-
-    <div class="row py-3 px-4">
-      <div class="col-md-12">
-        <h1 class="text-bold">Add Card</h1>
-      </div>
-      <div class="col-md-12">
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item">
-              <a (click)="cancel()">Card Lists</a>
-            </li>
-            <li class="breadcrumb-item active">
-              <a>Add Card</a>
-            </li>
-          </ol>
-        </nav>
-      </div>
-    </div>
+<div class="container mt-1">
     <div class="row py-5 px-5">
       <div class="col-md-12">
-        <div class="card panel mb-5">
-          <div class="card-body p-4">
+        <div class="card panel">
+          <div class="card-body">
             <div class="row p-4 mb-3">
               <div class="col-md-12">
                 <p class="subtitle mb-0">Data table contains information for all account added</p>
@@ -35,9 +16,7 @@
                       <div class="row">
                         <div class="col-md-6">
                           <div class="form-group form-row">
-                            <label class="control-label col-md-4">Credit Card Number
-                              &nbsp;
-
+                            <label class="control-label col-md-4">Credit Card No.
                             </label>
 
                             <div class="col-md-8">
@@ -122,13 +101,13 @@
                 </div>
                 <div class="card-footer">
                   <div class="row p-3">
-                    <div class="col-md-10"></div>
-                    <div class="col-md-1 text-right">
+                    <div class="col-md-7"></div>
+                    <div class="col-md-2 pl-3 pb-3 text-right">
                       <button class="btn btn-outline-primary btn-block" type="submit" (click)="cancel()">Cancel
 
                       </button>
                     </div>
-                    <div class="col-md-1 text-right">
+                    <div class="col-md-2 text-right">
                       <button class="btn btn-primary btn-block" type="submit" (click)="addTutorial()">
                         Save
                       </button>
@@ -141,5 +120,4 @@
         </div>
       </div>
     </div>
-  </div>
 </div>
